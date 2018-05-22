@@ -97,7 +97,11 @@
     }
 ];
 
-
+// Testing the existance of the element tabUsers in the local Storage
+if(localStorage.getItem('tabUsers') === null){
+  // intiating the localStorage with tabUsers element :
+  localStorage.tabUsers=JSON.stringify(tabUsers);
+}
 // Rigister the Service Worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
