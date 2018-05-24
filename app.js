@@ -14,7 +14,7 @@ if ('serviceWorker' in navigator) {
 
 let deferredPrompt;
 
-window.addEventListener('beforeinstallprompt', (e) => {
+window.addEventListener('beforeinstallprompt', function(e) => {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
   e.preventDefault();
   // Stash the event so it can be triggered later.
@@ -41,9 +41,11 @@ btnAdd.addEventListener('click', (e) => {
     });
 });
 // Detecting if you app is launched from the home screen
-if (window.matchMedia('(display-mode: standalone)').matches) {
-  console.log('display-mode is standalone');
+document.getElementById('appNotifPermssion').addEventListener('click',function(){
+   console.log('display-mode is standalone');
    Notification.requestPermission().then(function(result) {
        if(result === 'granted') {
            randomNotification();}});
-}
+})
+ 
+
