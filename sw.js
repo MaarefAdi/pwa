@@ -11,7 +11,7 @@ var appShellFiles = [
   '/pwa/js/popper.min.js',
   '/pwa/js/program.js',
   '/pwa/js/pgFormIns.js',
-  '/pwa/js/arrOfUsers.js'
+  '/pwa/js/arrOfUsers.js',
   '/pwa/img/it-can-64.jpg',
   '/pwa/img/it-can-192.jpg',
   '/pwa/img/it-can-512.jpg'
