@@ -34,12 +34,16 @@ btnAdd.addEventListener('click', (e) => {
     .then((choiceResult) => {
       if (choiceResult.outcome === 'accepted') {
         console.log('User accepted the A2HS prompt');
-          Notification.requestPermission().then(function(result) {
-       if(result === 'granted') {
-           randomNotification();}});
-      } else {
+         } else {
         console.log('User dismissed the A2HS prompt');
       }
       deferredPrompt = null;
     });
 });
+// Detecting if you app is launched from the home screen
+if (window.matchMedia('(display-mode: standalone)').matches) {
+  console.log('display-mode is standalone');
+   Notification.requestPermission().then(function(result) {
+       if(result === 'granted') {
+           randomNotification();}});
+}
