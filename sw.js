@@ -12,9 +12,9 @@ var appShellFiles = [
   '/pwa/js/program.js',
   '/pwa/js/pgFormIns.js',
   '/pwa/js/arrOfUsers.js'
-  '/pwa/img/it-can-64.png',
-  '/pwa/img/it-can-192.png',
-  '/pwa/img/it-can-512.png'
+  '/pwa/img/it-can-64.jpg',
+  '/pwa/img/it-can-192.jpg',
+  '/pwa/img/it-can-512.jpg'
 ];
 
 // Installing Service Worker
