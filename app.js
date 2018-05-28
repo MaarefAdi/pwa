@@ -40,13 +40,7 @@ btnAdd.addEventListener('click', (e) => {
       deferredPrompt = null;
     });
 });
-// Detecting if you app is launched from the home screen
-document.getElementById('appNotifPermssion').addEventListener('click',function(){
-   console.log('display-mode is standalone');
-   Notification.requestPermission().then(function(result) {
-       if(result === 'granted') {
-           randomNotification();}});
-})
+
 // Requesting permission for Notifications after clicking on the button
 var button = document.getElementById("notifications");
 button.addEventListener('click', function(e) {
