@@ -47,5 +47,27 @@ document.getElementById('appNotifPermssion').addEventListener('click',function()
        if(result === 'granted') {
            randomNotification();}});
 })
- 
+// Requesting permission for Notifications after clicking on the button
+var button = document.getElementById("notifications");
+button.addEventListener('click', function(e) {
+	Notification.requestPermission().then(function(result) {
+		if(result === 'granted') {
+			randomNotification();
+		}
+	});
+});
+
+// Setting up random Notification
+function randomNotification() {
+
+	var notifTitle = "Adi-app";
+	var notifBody = 'Created by Adi';
+	var notifImg = 'img/it-can-192.png';
+	var options = {
+		body: notifBody,
+		icon: notifImg
+	}
+	var notif = new Notification(notifTitle, options);
+	setTimeout(randomNotification, 30000);
+}
 
